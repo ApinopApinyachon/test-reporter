@@ -85,3 +85,33 @@ $ gpg --verify test-reporter-${VERSION}-darwin-amd64.sha256.sig test-reporter-${
 ## Copyright
 
 See the [LICENSE](https://github.com/codeclimate/test-reporter/blob/master/LICENSE).
+
+
+(Server)
+npm init
+npm i express
+npm i --save @types/express
+npm i -D typescript
+npm i ts-node-dev
+npm i cors
+npm i @types/cors
+npm i --save mysql2
+npm i --save-dev @types/node
+npm i fs
+npm i body-parser
+npm i prisma --save-dev
+npx tsc --init
+npx prisma init
+npx prisma migrate dev --name init
+npm i @prisma/client
+
+(Client)
+npx create-next-app@latest
+√ What is your project named? ... client
+√ Would you like to use TypeScript? ... Yes
+√ Would you like to use ESLint? ... Yes
+√ Would you like to use Tailwind CSS? ...  Yes
+√ Would you like to use `src/` directory? ... No
+√ Would you like to use App Router? (recommended) ... Yes
+√ Would you like to customize the default import alias (@/*)? ... No
+npx shadcn-ui@latest init
